@@ -9,7 +9,7 @@ const Hero = () => {
       < div className="hero-left">
         <div>
             <div>
-                <h2>"Fashion"</h2>
+                <h2>"Fashionffffffffff"</h2>
             </div>
             <div>
                 <p>is not something that exists in dresses only fashion<br/> is in the sky, in the strect fashion has to do with ideas the way<br/>we live what is happening.</p>
