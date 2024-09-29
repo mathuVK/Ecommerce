@@ -1,0 +1,39 @@
+# This is a sample GitLab CI configuration for building a React project
+
+image: node:16 # Use Node.js 16 image
+
+# Define the stages in the CI pipeline
+stages:
+  - install
+  - build
+  - test
+
+# Cache dependencies between jobs to speed up builds
+cache:
+  paths:
+    - node_modules/
+
+# Install dependencies
+install_dependencies:
+  stage: install
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
+
+# Build the React app
+build_react_app:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+
+# Run tests
+run_tests:
+  stage: test
+  script:
+    - npm test
+  allow_failure: true
